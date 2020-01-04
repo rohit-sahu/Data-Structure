@@ -1,4 +1,4 @@
-package interview.ds;
+package io.ds;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;

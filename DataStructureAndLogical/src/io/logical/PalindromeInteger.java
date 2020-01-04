@@ -1,4 +1,4 @@
-package interview.logical;
+package io.logical;
 
 public class PalindromeInteger {
 

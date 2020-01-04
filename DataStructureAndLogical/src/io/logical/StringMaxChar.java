@@ -1,4 +1,4 @@
-package interview.logical;
+package io.logical;
 
 import java.util.Arrays;
 

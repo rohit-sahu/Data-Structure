@@ -1,4 +1,4 @@
-package interview.logical;
+package io.logical;
 
 import org.eclipse.jdt.core.ToolFactory;
 import org.eclipse.jdt.core.formatter.CodeFormatter;

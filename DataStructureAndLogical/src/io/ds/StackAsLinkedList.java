@@ -1,4 +1,4 @@
-package interview.ds;
+package io.ds;
 
 /**
  * Implementing stack using queue. Resizeable Stack.
