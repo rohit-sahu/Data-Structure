@@ -11,7 +11,7 @@ public class PalindromeString {
 	
 	private static String reverse(String str) {
 		String output = "";
-		if (str == null || str.isEmpty() || str.isBlank()) {
+		if (str == null || str.isEmpty()) {
 			return str;
 		}
 		char[] cs = str.toCharArray();
@@ -23,7 +23,7 @@ public class PalindromeString {
 	
 	@SuppressWarnings("unused")
 	private static String reverseUsingRecurssive(String str) {
-		if (str == null || str.isEmpty() || str.isBlank()) {
+		if (str == null || str.isEmpty()) {
 			return str;
 		}
 		return str.charAt(str.length() - 1) + reverseUsingRecurssive(str.substring(0, str.length() - 1));
