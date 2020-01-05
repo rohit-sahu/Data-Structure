@@ -5,7 +5,7 @@ public class LinkedList {
 	Node head;
 	
 	public boolean add(Integer a) {
-		Node node = new Node(0, null);
+		Node node = new Node(a, null);
 		if (this.head == null) {
 			this.head = node;
 			return true;
@@ -20,6 +20,7 @@ public class LinkedList {
 	}
 	
 	static class Node {
+
 		int data;
 		Node next;
 		
@@ -34,9 +35,9 @@ public class LinkedList {
 			return "Node [data=" + data + ", next=" + next + "]";
 		}
 	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
 	}
 
 }

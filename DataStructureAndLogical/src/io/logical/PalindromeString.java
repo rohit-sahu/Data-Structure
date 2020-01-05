@@ -1,5 +1,7 @@
 package io.logical;
 
+import java.util.Arrays;
+
 public class PalindromeString {
 
 	private static boolean isPalindrome(String str) {
@@ -7,6 +9,18 @@ public class PalindromeString {
 			return true;
 		}
 		return false;
+	}
+
+	private static boolean isPalindrome(String str1, String str2) {
+		if (str1.equals(str2)) {
+			return true;
+		} else {
+			char[] s1 = str1.toCharArray();
+			char[] s2 = str2.toCharArray();
+			Arrays.sort(s1);
+			Arrays.sort(s2);
+			return Arrays.equals(s1, s2);
+		}
 	}
 	
 	private static String reverse(String str) {
@@ -32,5 +46,6 @@ public class PalindromeString {
 	public static void main(String[] args) {
 		String str = "BOB";
 		System.out.println(isPalindrome(str));
+		System.out.println(isPalindrome(str, "OBB"));
 	}
 }
