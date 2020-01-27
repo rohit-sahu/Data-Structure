@@ -3,6 +3,7 @@ package io.java8;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class LamdaExample {
 
@@ -51,6 +52,9 @@ public class LamdaExample {
         System.out.println("=============================================================");
         Optional<String> optional = players.stream().filter(player -> player.equals("Sachin")).findFirst();
         optional.ifPresent(System.out::println);
+        System.out.println("=============================================================");
+        List<String> stringList = players.stream().filter(x -> x.equals("Sachin") || x.equals("Kholi")).collect(Collectors.toList());
+        stringList.forEach(System.out::println);
     }
 }
 
