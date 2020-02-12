@@ -93,6 +93,37 @@ public class LinkedList {
         return true;
     }
 
+    // A simple and tail recursive function to reverse
+    public Node reverseLinkedList(Node current, Node previous) {
+        /* If last node mark it head*/
+        if (current.next == null) {
+            head = current;
+            /* Update next to prev node */
+            head.next = previous;
+            return head;
+        }
+        /* Save curr->next node for recursive call */
+        Node next = current.next;
+        /* and update next ..*/
+        current.next = previous;
+        reverseLinkedList(next, current);
+        return head;
+    }
+
+    public Node reverseLinkedList(Node head) {
+        Node previous = null;
+        Node current = head;
+        Node next = null;
+        while (current != null) {
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        head = previous;
+        return head;
+    }
+
     static class Node {
 
         int data;
