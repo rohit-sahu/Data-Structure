@@ -2,7 +2,7 @@ package io.java8;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.commons.text.StringEscapeUtils;
 import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
 
@@ -183,4 +183,3 @@ class Person {
         return "Person [id=" + id + ", fname=" + fname + ", lname=" + lname + "]";
     }
 }
-

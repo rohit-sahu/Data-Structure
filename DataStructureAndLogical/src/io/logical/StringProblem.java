@@ -1,5 +1,8 @@
 package io.logical;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 public class StringProblem {
 
     public static Set getUpperCaseArray(String str) {

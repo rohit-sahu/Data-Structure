@@ -117,6 +117,25 @@ public class ArrayProblem {
         }
     }
 
+    public static void getCountFromArray(String[] arr) {
+        HashMap<String, Integer> counter = new HashMap<>();
+        for (int i = 0; i < arr.length; i++) {
+            /*if (counter.containsKey(arr[i])) {
+                counter.put(arr[i], counter.get(arr[i]) + 1);
+            } else {
+                counter.put(arr[i], 1);
+            }*/
+            if (counter.getOrDefault(arr[i], 0) == 0) {
+                counter.put(arr[i], 1);
+            } else {
+                counter.put(arr[i], counter.get(arr[i]) + 1);
+            }
+        }
+        for (Map.Entry<String, Integer> entry : counter.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+    }
+
     public static void main(String[] args) {
         int arr[][] = {{0, 0, 0, 0}, {0, 0, 1, 0}, {1, 0, 1, 1}, {1, 1, 1, 1}};
         System.out.println(maxNoOfOnesInArray(arr));
